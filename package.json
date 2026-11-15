@@ -1,0 +1,57 @@
+{
+  "name": "@deepwhale-cn/dsh-legal-deadline",
+  "version": "0.1.0",
+  "description": "诉讼时效、上诉期、劳动仲裁时效、行政复议/诉讼期限的起算与届满计算，每项给公式与法条出处",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "plugin",
+    "skill",
+    "法律",
+    "期限",
+    "诉讼时效",
+    "计算"
+  ],
+  "files": [
+    "lib",
+    "skill",
+    "bin",
+    "cordis.patch.yml",
+    "tests/fixtures",
+    "README.md"
+  ],
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "dsh-legal-deadline": "bin/cli.mjs"
+  },
+  "engines": {
+    "dsh": ">=0.1.0-rc.6 <0.3.0",
+    "node": ">=18"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-skill": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feely0208/dsh-legal-deadline.git"
+  },
+  "homepage": "https://deepwhale.org.cn/plugins.html",
+  "bugs": {
+    "url": "https://github.com/feely0208/dsh-legal-deadline/issues"
+  },
+  "dependencies": {
+    "@deepwhale-cn/dsh-guard-core": "^0.10.1"
+  }
+}
